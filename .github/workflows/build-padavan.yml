@@ -96,6 +96,7 @@ jobs:
         #echo "自定义项=y" >> .config
         rm -rf /opt/rt-n56u/trunk/user/zerotier
         svn co https://github.com/xumng123/rt-n56u/trunk/trunk/user/zerotier /opt/rt-n56u/trunk/user/zerotier
+        sed -i 's/1.4.6/1.6.4a/g' /opt/rt-n56u/trunk/user/zerotier/Makefile
         #########################################################################################
         sudo ./clear_tree
         sudo ./build_firmware_modify $TNAME 0
