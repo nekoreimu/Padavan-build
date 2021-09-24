@@ -94,6 +94,9 @@ jobs:
         #格式如下：
         #sed -i '/自定义项/d' .config
         #echo "自定义项=y" >> .config
+        cd /opt/rt-n56u/trunk/user
+        rm -rf /opt/rt-n56u/trunk/user/zerotier
+        svn co https://github.com/xumng123/rt-n56u/trunk/trunk/user/zerotier /opt/rt-n56u/trunk/user/zerotier
         #########################################################################################
         sudo ./clear_tree
         sudo ./build_firmware_modify $TNAME 0
